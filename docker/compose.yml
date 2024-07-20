@@ -1,0 +1,11 @@
+---
+services:
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: test
+    volumes:
+      - ../:/app
+    working_dir: /app
+    tty: true
