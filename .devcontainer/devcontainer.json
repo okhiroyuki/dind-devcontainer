@@ -1,0 +1,34 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
+{
+	"name": "Node.js & TypeScript",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	// load Dockerfile
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"mounts": [
+		{
+			"source": "dind-var-lib-docker-${devcontainerId}",
+			"target": "/var/lib/docker",
+			"type": "volume"
+		}
+	],
+	"runArgs": [
+		"--init",
+		"--privileged"
+	],
+	"overrideCommand": false,
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-azuretools.vscode-docker",
+				"usernamehw.errorlens",
+				"GitHub.vscode-pull-request-github",
+				"GitHub.vscode-github-actions",
+				"GitHub.copilot",
+				"GitHub.copilot-chat"
+			]
+		}
+	}
+}
