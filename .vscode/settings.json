@@ -1,0 +1,6 @@
+{
+    "files.exclude": {
+        "**/.pre-commit-cache": true,
+        "**/.pre-commit-trivy-cache": true,
+    }
+}
