@@ -8,16 +8,8 @@
 		"dockerfile": "Dockerfile"
 	},
 	"mounts": [
-		{
-			"source": "dind-var-lib-docker-${devcontainerId}",
-			"target": "/var/lib/docker",
-			"type": "volume"
-		},
-		{
-			"source": "pre-commit-cache_${devcontainerId}",
-			"target": "${containerWorkspaceFolder}/.pre-commit-cache",
-			"type": "volume"
-		}
+		"source=dind-var-lib-docker-${devcontainerId},target=/var/lib/docker,type=volume",
+		"source=pre-commit-cache_${devcontainerId},target=${containerWorkspaceFolder}/.pre-commit-cache,type=volume"
 	],
 	"remoteEnv": {
 		"PRE_COMMIT_HOME": "${containerWorkspaceFolder}/.pre-commit-cache"
