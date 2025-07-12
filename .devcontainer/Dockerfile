@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/typescript-node:1-22
+FROM mcr.microsoft.com/devcontainers/typescript-node:2-22
 
 RUN curl -fsSL https://raw.githubusercontent.com/devcontainers/features/main/src/docker-in-docker/install.sh | bash
 
